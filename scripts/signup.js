@@ -47,6 +47,12 @@ if (localStorage.getItem('username').length > 0) {
 
 let allUsers;
 
+
+localStorage.setItem("username", "");
+localStorage.setItem("name", "");
+localStorage.setItem("gender", "");
+localStorage.setItem("email", "");
+localStorage.setItem("userId", "");
 // Functions
 
 let insertUser = (username, name, email, password, gender, users) => {
