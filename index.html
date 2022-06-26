@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Primary Meta Tags -->
+		<title>Go Koding</title>
+		<meta name="title" content="Go Koding">
+		<meta name="description" content="Time your coding with Go Koding.">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://www.facebook.com/people/Keep-Koding/100078717258286/">
+		<meta property="og:title" content="Go Koding">
+		<meta property="og:description" content="Time your coding with Go Koding.">
+		<meta property="og:image" content="logo.png">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://twitter.com/KodingKeep">
+		<meta property="twitter:title" content="Go Koding">
+		<meta property="twitter:description" content="Time your coding with Go Koding.">
+		<meta property="twitter:image" content="logo.png">
+
+		<meta charset="utf-8" viewport="width: device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Nunito+Sans:wght@200&family=Roboto:wght@500&display=swap" rel="stylesheet">		
+		<link href="css/index.css" type="text/css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<meta name="google-signin-client_id" content="808867261924-j9f2309tdisfropooht8fv1ko7acgvqo.apps.googleusercontent.com" >
+		<link href="logo.png" type="image/png" rel="icon" />
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+		<script src="https://kit.fontawesome.com/60967665fa.js" crossorigin="anonymous"></script>
+		<title>Go Koding</title>
+		<script defer src="scripts/index.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo-container">
+				<a href="index.html">
+					<img src="logo.png" alt="gokodinglogo" class="logo"/>
+				</a>
+				<a href="index.html">
+					<img src="images/logo-txt.png" alt="gokoding" class="logo-txt"/>
+				</a>
+			</div>
+			<div class="nav-container">
+				<nav>
+					<a href="../index.html">
+						<button id="home-button">
+							<i class="fa-solid fa-house"></i>
+							Home
+						</button>
+					</a>
+					<a href="pages/practice.html">
+						<button >
+							<i class="fa-solid fa-code"></i>
+							Practice
+						</button>
+					</a>
+					<a href="pages/getintouch.html" target="_blank">
+						<button>
+							<i class="fa-solid fa-envelope"></i>
+							Get In Touch
+						</button>
+					</a>
+					<a href="pages/signup.html" id="signup-link">
+						<button>
+							<i class="fa-solid fa-arrow-right-to-bracket"></i>
+							Sign Up
+						</button>
+					</a>
+					<button id="open-profile__button" onclick="openProfile(); return true;">
+						<i class="fa-regular fa-user"></i>
+					</button>
+					<button id="open-nav-phones">
+						<i class="fa-solid fa-bars"></i>
+					</button>
+				</nav>	
+			</div>
+		</header>
+
+		<div class="nav-container-phones">
+			<button>
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+			<nav>
+				<a href="pages/practice.html">
+					<button >
+						<i class="fa-solid fa-code"></i>
+						Practice
+					</button>
+				</a>
+				<a href="pages/getintouch.html" target="_blank">
+					<button>
+						<i class="fa-solid fa-envelope"></i>
+						Get In Touch
+					</button>
+				</a>
+				<a href="pages/signup.html" id="signup-link">
+					<button>
+						<i class="fa-solid fa-arrow-right-to-bracket"></i>
+						Sign Up
+					</button>
+				</a>
+			</nav>
+		</div>
+		
+		<div class="profile" >
+				<button type="button" class="profile-close" onclick="profileClose()">&times;</button>
+				<img src="images/dead-face.jpg" alt="Profile Image" id="profile-img">
+				<div class="profile-name" id="name"></div>
+				<div id="user-info">
+					<div class="profile-group">
+						<label for="username">Username</label>
+						<div class="username" name="username" id="username"></div>
+					</div>
+					<div class="profile-group">
+						<label for="email">Email</label>
+						<div class="email" name="email" id="email"></div>
+					</div>
+				</div>
+				<div id="not-signed-in">
+				</div>
+		</div>
+
+		
+		<div class="presentation">
+			<h3 id="why-gokoding">why Go Koding</h3>
+			<div class="why-gk">
+				<p>
+					<br>
+					Go Koding is here to make your life <u>easier</u>.
+					<br>
+					If you are not the person that spends his precious time to install apps
+					just to have a coding time tracker, you are at the perfect URL.
+					Did you ever really want to know how much time you spend coding?
+					<br><br>
+					<u>P.S</u>: Save the link. You're gonna need it for later.
+				</p>
+				<img src="images/time-management.png" alt="Time Management">
+			</div>
+		</div>
+		<!-- <div class="g-signin2"></div> -->
+
+				
+		<div class="quotes-container">
+			<h2>what we built Go Koding on</h2>
+			<hr>
+			<div class="quotes">
+				<div id="edison-quote">
+					<div class="qoute">
+						<blockquote>	
+							"Genius is 1% inspiration and <b>99% perspiration</b>."
+						</blockquote>
+						<p><b>Thomas Edison</b></p>
+					</div>
+					<img src="images/light-bulb.png" id="img-edison" alt="Edison" />
+				</div>
+
+				<div id="roosvelt-quote">
+					<img  src="images/teddybear.png" id="img-roosvelt" alt="Roosevelt" />
+					<div class="quote">
+						<blockquote> 
+							"Courage is not having the strength to go on, it is going on when you don't have the strength."
+						</blockquote>
+						<p style="transform: translateX(-50px)"><b>Theodore Roosvelt</b></p>
+					</div>
+				</div>
+				
+				<div id="einstein-quote">
+					<div class="quote">
+						<blockquote> 
+							"Life is like riding a bycicle, to keep your balance you must keep going."
+						</blockquote>
+						<p><b>Albert Einstein</b></p>
+					</div>
+					<img src="images/einstein.png" id="img-einstein" alt="Einstein" />
+				</div>
+			</div>
+		</div>
+			
+		<div class=curved>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7063d1"
+				fill-opacity="1" d="M0,160L48,154.7C96,149,192,139,288,154.7C384,171,480,213,576,218.7C672,224,768,192,864,170.7C960,149,1056,139,1152,154.7C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+			</path>
+			</svg>
+			<p>still don't know where to start from... ?</p>
+			<div class="curved-container">
+
+				<div class="cards__row">
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i class="fa-brands fa-html5"></i>HTML</h3>
+								<p>The Web Builder</p>	
+								<button>
+									<a href="https://www.w3schools.com/html/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>
+						</div>
+						<div class="contain" >
+							<div class="inner">
+								<span>
+									<i class="fa-solid fa-info"></i>
+								</span>
+								<h3>HTML</h3>
+								<p>
+									HTML stands for Hypertext Markup Language.<br>
+									We encourage you to use this language if you want to structure a website.
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i class="fa-solid fa-database"></i>SQL</h3>
+								<p>Your Databases' Friend </p>
+								<button>
+									<a href="https://www.w3schools.com/sql/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>	
+							</div>
+						<div class="contain" >
+							<div class="inner">
+							<span>
+								<i class="fa-solid fa-info"></i>
+							</span>
+								<h3 style="text-align: left">SQL</h3>
+								<p>
+									SQL is the creation of IBM and a domain-specific language 
+									for managing a relational database.
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i class="fa-brands fa-php"></i>PHP</h3>
+								<p>A Web Server Programming Language</p>	
+								<button>
+									<a href="https://www.w3schools.com/php/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>
+							</div>
+						<div class="contain" >
+							<div class="inner">
+							<span>
+								<i class="fa-solid fa-info"></i>
+							</span>
+								<h3 style="text-align: left">PHP</h3>
+								<p>
+									It is a very good web server language.
+									PHP originally stood for "Personal Home Page",
+									but now it stands for "Hypertext Preprocessor".
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cards__row">
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i class="fa-brands fa-css3-alt"></i>CSS</h3>
+								<p>The Web Designer</p>	
+								<button>
+									<a href="https://www.w3schools.com/css/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>
+						</div>
+						<div class="contain" >
+							<div class="inner">
+							<span><i class="fa-solid fa-info"></i></span>
+								<h3>CSS</h3>
+								<p>
+									Cascading Style Sheet is best
+									for making your webpage more attractive, and so your<br>
+									website will be more user friendly.
+								</p>	
+							</div>
+						</div>
+					</div>
+					
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i class="fa-brands fa-python"></i>Python</h3>
+								<p>The #1 in 
+									<a href="https://www.tiobe.com/tiobe-index/?msclkid=b739fce6bcbf11ecb26125b09036ae4f" id="tiobe">TIOBE</a>
+									and 
+									<a href="https://pypl.github.io/PYPL.html?msclkid=d1df8388b8ce11ec8f4402ea275fe5e0" id="pypl"> PyPL</a>
+								</p>
+								<button>
+									<a href="https://www.w3schools.com/python/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>
+							</div>
+						<div class="contain" >
+							<div class="inner">
+							<span><i class="fa-solid fa-info"></i></span>
+								<h3>Python</h3>
+								<p>
+									A programming language that is loved by most of the Data Analysts,
+									and not only.
+								</p>	
+							</div>
+						</div>
+					</div>
+					
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i style="font-weight: 800;" class="fa-brands fa-java"></i>Java</h3>
+								<p>The "Brain Squeezer"</p>
+								<button>
+									<a href="https://www.w3schools.com/java/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>
+							</div>
+						<div class="contain" >
+							<div class="inner">
+								<span><i class="fa-solid fa-info"></i></span>
+								<h3>Java</h3>
+								<p>It is one of the most used and loved programming languages by 
+									developers. Helpful if you are looking for a job.</p>	
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="cards__row"  id="last__row">
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i class="fa-brands fa-js-square"></i>JavaScript</h3>
+								<p>The Interactive Programming Language</p>	
+								<button>
+									<a href="https://www.w3schools.com/js/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>
+						</div>
+						<div class="contain" >
+							<div class="inner">
+							<span><i class="fa-solid fa-info"></i></span>
+								<h3>JavaScript</h3>
+								<p>
+									An OOP programming language which is helpful for
+									implementing  website interactivity.
+								</p>	
+							</div>
+						</div>
+					</div>
+					
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i class="fa-brands fa-node-js"></i>Node.js</h3>
+								<p>Runtime Environment</p>
+								<button>
+									<a href="https://www.w3schools.com/nodejs/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>
+							</div>
+						<div class="contain" >
+							<div class="inner">
+							<span><i class="fa-solid fa-info"></i></span>
+								<h3>Node.js</h3>
+								<p>
+									A JavaScript runtime environment that is used for web server development.
+								</p>	
+							</div>
+						</div>
+					</div>
+					
+					<div class="card">
+						<div class="learn-card" >
+								<h3><i class="fa-brands fa-react"></i>React.js</h3>
+								<p>The UI Developer's Soul Mate</p>	
+								<button>
+									<a href="https://www.w3schools.com/react/default.asp" target="_blank">
+										Learn
+									</a>
+								</button>
+							</div>
+						<div class="contain" >
+							<div class="inner">
+							<span><i class="fa-solid fa-info"></i></span>
+								<h3>React.js</h3>
+								<p>The JavaScript library for building user interfaces based on UI components.</p>	
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				
+			</div>
+
+		</div>
+
+		<footer>
+			<div class="lists">
+				<ul>
+					<lh>Contact Owner</lh>
+					<li>
+						<a href="https://www.facebook.com/alinalexandru.peter.bruh/" target="_blank">
+							facebook<i class="fa-brands fa-facebook fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/AlinAlexandruP6" target="_blank">
+							twitter<i class="fa-brands fa-twitter fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://vm.tiktok.com/ZMLDW9HoL/" target="_blank">
+							tiktok<i class="fa-brands fa-tiktok fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="mailto: peteralexandru00@gmail.com">
+							email<i class="fa-solid fa-at"></i>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<lh>Follow Us On</lh>
+					<li>
+						<a href="https://www.facebook.com/profile.php?id=100078717258286" target="_blank">
+							facebook<i class="fa-brands fa-facebook fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/KodingKeep" target="_blank">
+							twitter<i class="fa-brands fa-twitter fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/go.koding/" target="_blank">
+							instagram<i class="fa-brands fa-instagram fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/keep-koding-035671233/" target="_blank">
+							linkedin<i class="fa-brands fa-linkedin fa-lg"></i>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<lh>Others</lh>
+					<li>
+						<a href="pages/getintouch.html" target="_blank">
+							Contact Us
+						</a>
+					</li>
+					<li>
+						<a href="pages/signup.html">
+							Sign Up
+						</a>
+					</li>
+					<li>
+						<a href="pages/privacypolicy.html" target="_blank">
+							Privacy Policy
+						</a>
+					</li>
+					<li>
+						<a href="pages/terms&conds.html" target="_blank">
+							Terms and Conditions
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div>&copy; 2022 Keep Koding</div>
+		</footer>
+	</body>
+<html>

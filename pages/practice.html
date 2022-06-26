@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Practice</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Nunito+Sans:wght@200&family=Roboto:wght@500&display=swap" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+		<link href="../css/practice.css" type="text/css" rel="stylesheet" />
+		<link href="../logo.png" type="image/png" rel="icon" />
+		<script src="https://kit.fontawesome.com/60967665fa.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo-container">
+				<a href="../index.html">
+					<img src="../logo.png" alt="gokodinglogo" class="logo"/>
+				</a>
+				<a href="../index.html">
+					<img src="../images/logo-txt.png" alt="gokoding" class="logo-txt"/>
+				</a>
+			</div>
+			<div class="nav-container">
+				<nav>
+					<a href="../index.html" id="home-button">
+						<button  >
+							<i class="fa-solid fa-house"></i>
+							Home
+						</button>
+					</a>
+					<a href="practice.html">
+						<button id="practice-button">
+							<i class="fa-solid fa-code"></i>
+							Practice
+						</button>
+					</a>
+					<a href="getintouch.html" target="_blank" id="intouch-button">
+						<button>
+							<i class="fa-solid fa-envelope"></i>
+							Get In Touch
+						</button>
+					</a>
+					<button id="open-profile-button" onclick="openProfile(); return true;">
+						<i class="fa-regular fa-user"></i>
+					</button>
+				</nav>	
+			</div>
+		</header>
+
+		
+        <!-- timer -->
+		<div class="main-container">
+			<div class="profile" >
+				<button type="button" class="profile-close" onclick="profileClose()">&times;</button>
+				<img src="../images/profile-card-pic-male.jpg" alt="Profile Image" id="profile-img">
+				<div class="profile-name" id="name"></div>
+				<div class="profile-group">
+					<label for="username">Username</label>
+					<div class="username" name="username" id="username"></div>
+				</div>
+				<div class="profile-group">
+					<label for="email">Email</label>
+					<div class="email" name="email" id="email"></div>
+				</div>	
+			</div>
+	
+			
+			<div class="time-you">
+				<h1>time your coding</h1>
+			</div>
+			
+			<div class="timer-container">
+				<div class="timer">
+					00:00:00
+				</div>
+				<div class="controls">
+					<button id="start">START</button>
+					<button id="pause">PAUSE</button>
+					<button id="finished">I'M DONE</button>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="before">
+			<h1>Before you start...</h1>
+			<br>
+			<h3>How much time do you wanna spend coding?</h3>
+			
+			<div class="input-wrapper">
+				<input type="number" value="0" max="9" min="0">
+				<p>hours</p> 
+				<input type="number" value="0" max="59" min="1">
+				<p>minutes</p> 
+			</div>
+
+			<div class="btn-wrapper">
+				<button id="close-before">Close</button>
+				<button id="done">Done</button>
+			</div>
+		</div>
+
+		<div class="congrats">
+			<h1>Congrats!! 🎉🎉🥳</h1>
+			<br>
+			<h3>You achieved your goal for today</h3>
+
+			<div class="btn-wrapper">
+				<button id="close-congrats">Close</button>
+			</div>
+		</div>
+		
+		<div class="chart-container" style="width: 80%; height: 40%;">
+
+			<canvas id="chart"></canvas>
+		</div>
+
+		<footer>
+			<div class="lists">
+				<ul>
+					<lh>Contact Owner</lh>
+					<li>
+						<a href="https://www.facebook.com/alinalexandru.peter.bruh/" target="_blank">
+							facebook<i class="fa-brands fa-facebook fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/AlinAlexandruP6" target="_blank">
+							twitter<i class="fa-brands fa-twitter fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://vm.tiktok.com/ZMLDW9HoL/" target="_blank">
+							tiktok<i class="fa-brands fa-tiktok fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="mailto: peteralexandru00@gmail.com">
+							email<i class="fa-solid fa-at"></i>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<lh>Follow Us On</lh>
+					<li>
+						<a href="https://www.facebook.com/profile.php?id=100078717258286" target="_blank">
+							facebook<i class="fa-brands fa-facebook fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/KodingKeep" target="_blank">
+							twitter<i class="fa-brands fa-twitter fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/go.koding/" target="_blank">
+							instagram<i class="fa-brands fa-instagram fa-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/keep-koding-035671233/" target="_blank">
+							linkedin<i class="fa-brands fa-linkedin fa-lg"></i>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<lh>Others</lh>
+					<li>
+						<a href="getintouch.html" target="_blank">
+							Contact Us
+						</a>
+					</li>
+					<li>
+						<a href="signup.html" target="_blank">
+							Sign Up
+						</a>
+					</li>
+					<li>
+						<a href="privacypolicy.html" target="_blank">
+							Privacy Policy
+						</a>
+					</li>
+					<li>
+						<a href="terms&conds.html" target="_blank">
+							Terms and Conditions
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div>© 2022 Keep Koding</div>
+		</footer>
+
+		<script src="../scripts/confetti.js"></script>
+		<script src="../scripts/practice.js" ></script>
+    </body>
+
+</html>

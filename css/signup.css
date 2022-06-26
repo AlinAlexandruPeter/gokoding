@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn h4,
+#signin h4 {
+    margin-top: 5px;
+    color: #777;
+}
+
+.steps i {
+    color: #fff;
+}
+
+.btn a,
+#signin a{
+    color: rgb(59, 59, 228);
+}
+
+#signin h4 {
+    margin-right: 50px;
+}
+
+.btn a:hover,
+#signin a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+label {
+    position: absolute;
+    font-size: 15px;
+    margin-bottom: 2px;
+    color: #7063d1;
+    text-align: left;
+}
+
+body {
+    background: url('../images/wave.png');
+    background-repeat: none;
+    background-size: cover;
+    overflow-y: hidden;
+    position: relative;
+}
+
+div img {
+    position: absolute;
+    top: 0;
+}
+
+.images div img {
+    transform: translateX(300px)
+}
+
+.images > img {
+    width: 700px;
+    height: 700px;
+    transform: translateX(100px) translateY(-20px);
+}
+
+img[src='../images/coding.png'] {
+    transform: translateY(-700px);
+    transition: all .75s;
+}
+
+img[src='../images/software-engineer.png'] {
+    transition: all .75s;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: right;
+    justify-content: right;
+    width: 360px;
+    height: 440px;
+    margin: 8% auto;
+    /* background: rgb(209, 114, 114); */
+    /* background: white; */
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transform: translateX(400px)
+}
+
+.pass-wrapper #show-hide,
+.pass-wrapper #show-hide-in {
+    background: transparent;
+    color: #000;
+    width: auto;
+    height: auto;
+    padding: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    right: -5%;
+}
+
+.pass-wrapper #show-hide-in {
+    top: 31%;
+    right: -35%;
+}
+
+#signin-err {
+    visibility: hidden;
+}
+
+#firstName,
+#lastName {
+    text-transform: capitalize;
+}
+
+h2 {
+    transform: translateY(-50px);
+    color: #7063d1;
+    text-align: center
+}
+
+h3 {
+    text-align: center;
+    margin: -30px 0 15px 0;
+    color: #777
+}
+
+form {
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    transition: .5s;
+}
+
+form input {
+    width: 100%;
+    padding: 20px 5px 5px 5px;
+    margin: 5px 0;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent
+}
+
+::placeholder {
+    color: #777;
+}
+
+.btn {
+    width: 100%;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.error {
+    color: rgb(206, 94, 94);
+    visibility: hidden;
+    width: 100%;
+    text-align: center;
+    transition: visibility .75s;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+    margin: 10px 10px 0 0;
+    outline: none;
+    /* background: linear-gradient(to right, white, #7063d1); */
+    background: rgb(112,99,209);
+    background: linear-gradient(188deg, rgba(112,99,209,1) 35%, rgba(17,83,213,1) 100%);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#steps {
+    opacity: 1;
+    transition: opacity .5s
+}
+
+#email__error,
+#password__error {
+    width: 100%;
+    position: absolute;
+    color:rgb(206, 94, 94);
+    visibility: hidden;
+}
+
+#password__error {
+    font-size: .8rem;
+}
+
+#credentials,
+#optional,
+#signin {
+    left: 450px
+}
+
+#back1,
+#back2,
+#next2,
+#submit {
+    margin-top: 0;
+}
+
+#signin button {
+    margin: 20px 90px 10px 90px;
+
+}
+
+
+.steps {
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 5px #777; */
+    position: relative;
+    /* display: flex;
+    justify-content: space-around; */
+}
+
+.steps .col {
+    width: 180px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+
+
+#progress {
+    position: absolute;
+    height: 100%;
+    width: 180px;
+    background: rgb(112,99,209);
+    background: linear-gradient(200deg, rgba(112,99,209,1) 35%, rgba(17,83,213,1) 100%);
+    transition: 1s
+}
+
+#progress::after {
+    content: " ";
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid rgba(112,99,209,1);
+}
