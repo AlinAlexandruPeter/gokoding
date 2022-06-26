@@ -38,6 +38,11 @@ let steps = [
     document.getElementById('step2'),
 ]
 
+localStorage.setItem("username", "");
+localStorage.setItem("name", "");
+localStorage.setItem("gender", "");
+localStorage.setItem("email", "");
+localStorage.setItem("userId", "");
 
 if (localStorage.getItem('username').length > 0) {
     window.location.replace("../index.html")
@@ -46,13 +51,6 @@ if (localStorage.getItem('username').length > 0) {
 
 
 let allUsers;
-
-
-localStorage.setItem("username", "");
-localStorage.setItem("name", "");
-localStorage.setItem("gender", "");
-localStorage.setItem("email", "");
-localStorage.setItem("userId", "");
 // Functions
 
 let insertUser = (username, name, email, password, gender, users) => {
