@@ -176,7 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 closeButton.addEventListener('click', () => {
     document.querySelector('.before').style.transform = 'translateY(-1200px)';
-    timeSet = false
+    timeSet = false;
+    document.querySelector('.timer-container').style.opacity = '1';
 });
 
 doneButton.addEventListener('click', () => {
