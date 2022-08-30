@@ -45,7 +45,7 @@ localStorage.setItem("email", "");
 localStorage.setItem("userId", "");
 
 if (localStorage.getItem('username').length > 0) {
-    window.location.replace("../index.html")
+    window.location.replace("https://gokoding.online")
 
 }
 
@@ -203,11 +203,7 @@ signIn.addEventListener("click", () => {
             singinError.style.visibility = 'visible';
 
             setTimeout(() => {
-                singinError.style.visibility = 'hidden';
-            }, 2000);
-
-            setTimeout(() => {
-                window.location.replace("../index.html");
+                window.location.replace("https://gokoding.online");
 
             }, 2000)
 
@@ -376,7 +372,7 @@ submit.addEventListener('click', (button) => {
     submitError.style.visibility = 'visible';
 
     setTimeout(() => {
-        window.location.replace('../index.html')
+        window.location.replace('https://gokoding.online')
     }, 3000)
 });
 
