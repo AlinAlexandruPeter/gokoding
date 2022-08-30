@@ -210,8 +210,6 @@ signIn.addEventListener("click", () => {
 
         } else if (user.username !== usernameSignIn.value) {
             if (usernameSignIn.value.includes('@')) {
-
-                //singinError.textContent = 'Email is not registered';
                 singinError.style.visibility = 'visible';
     
                 setTimeout(() => {
