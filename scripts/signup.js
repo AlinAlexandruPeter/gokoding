@@ -370,7 +370,7 @@ submit.addEventListener('click', (button) => {
     submitError.style.visibility = 'visible';
 
     setTimeout(() => {
-        window.location.replace('https://gokoding.online')
+        window.location.replace('https://gokoding.netlify.app')
     }, 3000)
 });
 
